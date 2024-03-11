@@ -5,6 +5,8 @@
 
 body {
   height: 100%;
-  background-image: linear-gradient(blue, violet);
+  background-image: url(background.jpg);
+  /* background-ima */
+  background-size: cover;
 
 }

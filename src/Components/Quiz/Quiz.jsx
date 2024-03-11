@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import './Quiz.css'
 import { data } from '../../assets/data';
-
+import Timer from './Timer';
 const Quiz = () => {
 
     let [index, setIndex] = useState(0);
@@ -16,6 +16,7 @@ const Quiz = () => {
     let Option4 = useRef(null);
 
     let option_array = [Option1, Option2, Option3, Option4]
+
 
     const checkAns = (e, ans) => {
         if (lock === false) {
@@ -60,6 +61,7 @@ const Quiz = () => {
     return (
         <div className='container'>
             <h1>Quiz App</h1>
+            <Timer />
             <hr />
             {result ?
                 <>
@@ -74,7 +76,7 @@ const Quiz = () => {
                         <li ref={Option4} onClick={(e) => { checkAns(e, 4) }}>{question.option4}</li>
                     </ul>
                     <button onClick={next}>Next</button>
-                    <div className='index'>{index + 1} of {data.length} Questions</div>
+                    <div className='index'><b>{index + 1} of {data.length} Questions</b></div>
                 </>
             }
             {result ? <>

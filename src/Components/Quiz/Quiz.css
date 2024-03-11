@@ -1,21 +1,25 @@
 .container {
+    /* height: 500px; */
     width: 640px;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    background: white;
+    background: transparent;
     color: black;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: white;
     border-radius: 10px;
     padding: 40px 50px;
+    border: 1px solid white;
 }
 
 .container hr {
+
     height: 1px;
     border: none;
-    background: #707070;
+    background: white;
 }
 
 .container h2 {
@@ -28,7 +32,7 @@
     align-items: center;
     height: 60px;
     padding-left: 15px;
-    border: 1px solid #686868;
+    border: 1px solid white;
     border-radius: 8px;
     margin-bottom: 20px;
     font-size: 20px;
